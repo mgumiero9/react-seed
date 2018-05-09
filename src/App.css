@@ -22,6 +22,12 @@
   font-size: large;
 }
 
+.Body {
+  background-color: rgb(148, 192, 194);
+  width: 20%;
+  text-align: center;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
