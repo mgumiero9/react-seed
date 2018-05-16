@@ -1,24 +1,20 @@
 import React from "react";
 import ListItem from "./ListItem";
 
-var ingredients = [
-  { id: 0, text: "ham", priority: "x" },
-  { id: 1, text: "cheese", priority: "y" },
-  { id: 2, text: "potatoes", priority: "z" }
-];
-
 class List extends React.Component {
   render() {
-    var listItems = ingredients.map(function(item) {
+    var createItem = function(text, index) {
       return (
         <ListItem
-          id={item.id}
-          ingredient={item.text}
-          priority={item.priority}
+          key={index + text}
+          id={index}
+          text={text}
         />
       );
-    });
-    return <ul>{listItems}</ul>;
+    };
+    return (
+      <ul>{this.props.items.map(createItem)}</ul>
+    );  
   }
 }
 
