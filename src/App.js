@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ListManager from './components/ListManager';
+import 'jquery';
+import 'bootstrap';
 
 class App extends Component {
   render() {
