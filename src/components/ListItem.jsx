@@ -5,8 +5,7 @@ class ListItem extends React.Component {
     return (
       <li>
         <h4>
-          {this.props.id}.
-          {this.props.ingredient}
+          {this.props.id} {this.props.ingredient} {this.props.priority}
         </h4>
       </li>
     );
