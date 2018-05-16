@@ -1,12 +1,11 @@
 import React from 'react';
 import List from './List';
 
-var currentItems = [];
-
 class ListManager extends React.Component {
     constructor(props) {
         super(props);
         this.state = {items: [], newItemText:'' };
+        this.currentItems = [];
         
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -18,8 +17,8 @@ class ListManager extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        currentItems.push(this.state.newItemText);
-        this.setState({items: currentItems, newItemText: ''});
+        this.currentItems.push(this.state.newItemText);
+        this.setState({items: this.currentItems, newItemText: ''});
     }
     
     render()  {
@@ -30,7 +29,7 @@ class ListManager extends React.Component {
                     <input type="text" onChange={this.handleChange} value={this.state.newItemText}/>
                     <button type="submit">Add</button>
                 </form>
-                <List items={currentItems} />
+                <List items={this.currentItems} />
             </div>
         );
     }
