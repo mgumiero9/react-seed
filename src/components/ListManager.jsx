@@ -22,7 +22,7 @@ class ListManager extends React.Component {
     }
 
     render() {
-        var divMarginTop = { marginTop: 30 }
+        var divMarginTop = { marginTop: 30 };                 
         return (
             <div className="container col-sm-3">
                 <div className="card border-primary" style={divMarginTop}>
