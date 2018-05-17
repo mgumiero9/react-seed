@@ -22,18 +22,26 @@ class ListManager extends React.Component {
     }
 
     render() {
+        var divMarginTop = { marginTop: 30 }
         return (
-            <div className="container">
-                <div className="card">
-                    <div className="card-header">
-                        <h3>{this.props.title}</h3>
+            <div className="container col-sm-3">
+                <div className="card border-primary" style={divMarginTop}>
+                    <div className="card-header bg-primary" >
+                        <h3 className="text-white">{this.props.title}</h3>
                     </div>
-                    <div className="card-body">
-                        <form onSubmit={this.handleSubmit}>
-                            <input type="text" onChange={this.handleChange} value={this.state.newItemText} />
-                            <button className="btn btn-primary" type="submit">Add</button>
+                    <div className="row card-body">
+                        <form className="form-inline" onSubmit={this.handleSubmit}>
+                            <div className="col-sm-9" >
+                                <input className="form-control border-border-info" type="text" 
+                                        onChange={this.handleChange} value={this.state.newItemText} />
+                            </div>
+                            <div className="col-sm-2" >
+                                <button className="btn btn-primary" type="submit">Add</button>
+                            </div>
                         </form>
-                        <List items={this.currentItems} />
+                        <div style={divMarginTop}>
+                            <List items={this.currentItems} />
+                        </div>
                     </div>
                 </div>
             </div>
