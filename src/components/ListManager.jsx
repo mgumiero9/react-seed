@@ -30,7 +30,7 @@ class ListManager extends React.Component {
                         <h3 className="text-white">{this.props.title}</h3>
                     </div>
                     <div className="row card-body">
-                        <form className="form-inline" onSubmit={this.handleSubmit}>
+                        <form className="form-inline justify-content-center" onSubmit={this.handleSubmit}>
                             <div className="col-sm-9" >
                                 <input className="form-control border-border-info" type="text" 
                                         onChange={this.handleChange} value={this.state.newItemText} />
