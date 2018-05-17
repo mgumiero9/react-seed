@@ -23,13 +23,19 @@ class ListManager extends React.Component {
 
     render() {
         return (
-            <div>
-                <h3>{this.props.title}</h3>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" onChange={this.handleChange} value={this.state.newItemText} />
-                    <button type="submit">Add</button>
-                </form>
-                <List items={this.currentItems} />
+            <div className="container">
+                <div className="card">
+                    <div className="card-header">
+                        <h3>{this.props.title}</h3>
+                    </div>
+                    <div className="card-body">
+                        <form onSubmit={this.handleSubmit}>
+                            <input type="text" onChange={this.handleChange} value={this.state.newItemText} />
+                            <button className="btn btn-primary" type="submit">Add</button>
+                        </form>
+                        <List items={this.currentItems} />
+                    </div>
+                </div>
             </div>
         );
     }
