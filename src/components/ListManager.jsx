@@ -39,8 +39,8 @@ class ListManager extends React.Component {
                                 <button className="btn btn-primary" type="submit">Add</button>
                             </div>
                         </form>
-                        <div style={divMarginTop}>
-                            <List items={this.currentItems} />
+                        <div className="offset-3 justify-content-start" style={divMarginTop}>
+                            <List className="" items={this.currentItems} />
                         </div>
                     </div>
                 </div>
