@@ -22,10 +22,11 @@ class ListManager extends React.Component {
     }
 
     render() {
+        var divMargin = { marginTop: 30, marginLeft: 30 };                 
         var divMarginTop = { marginTop: 30 };                 
         return (
-            <div className="container col-sm-3">
-                <div className="card border-primary" style={divMarginTop}>
+            <div className="col-sm-3">
+                <div className="card border-primary" style={divMargin}>
                     <div className="card-header bg-primary" >
                         <h3 className="text-white">{this.props.title}</h3>
                     </div>
