@@ -20,9 +20,9 @@ class Toggle extends React.Component {
 
     handleClick2() {
         this.setState(function(prevState) {
-            return ({
+            return {
                 isToggleOn2: !prevState.isToggleOn2
-            })
+            }
         });
     }
     
