@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ListManager from './components/ListManager';
+import Toggle from './components/Toggle';
 
 class App extends Component {
   render() {
@@ -14,8 +15,9 @@ class App extends Component {
         <p className="App-intro">
           <code> </code>
         </p>
-        <div>
-          <ListManager title="Ingredients"/>
+        <div className="row">
+          <Toggle className="col-sm-4"/>
+          <ListManager className="col-sm-8" title="Ingredients"/>
         </div>
       </div>
     );
